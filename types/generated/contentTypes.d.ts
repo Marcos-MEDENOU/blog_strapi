@@ -374,8 +374,8 @@ export interface ApiPostPost extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.Text;
-    content: Attribute.RichText &
+    Title: Attribute.String;
+    Content: Attribute.RichText &
       Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
         {
@@ -383,6 +383,7 @@ export interface ApiPostPost extends Schema.CollectionType {
           preset: 'rich';
         }
       >;
+    Date_de_publication: Attribute.Date & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
