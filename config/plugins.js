@@ -27,14 +27,14 @@ module.exports = {
         {
           uid: 'api::post.post',
           draft: {
-            url: 'http://localhost:1337/api/preview',
+            url: 'http://localhost:1337/api/post/preview',
             query: {
               type: 'post',
               slug: '{slug}',
             },
           },
           published: {
-            url: 'http://localhost:1337/blog/{slug}',
+            url: 'http://localhost:1337/post/{slug}',
           },
         },
       ],

@@ -375,7 +375,7 @@ export interface ApiPostPost extends Schema.CollectionType {
   };
   pluginOptions: {
     'preview-button': {
-      listViewColumn: false;
+      listViewColumn: true;
     };
   };
   attributes: {
@@ -389,6 +389,13 @@ export interface ApiPostPost extends Schema.CollectionType {
         }
       >;
     Date_de_publication: Attribute.Date & Attribute.Required;
+    slug: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }> &
+      Attribute.DefaultTo<'idenifiant '>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

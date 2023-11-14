@@ -12,7 +12,7 @@
   },
   "pluginOptions": {
     "preview-button": {
-      "listViewColumn": false
+      "listViewColumn": true
     }
   },
   "attributes": {
@@ -30,6 +30,13 @@
     "Date_de_publication": {
       "type": "date",
       "required": true
+    },
+    "slug": {
+      "type": "string",
+      "default": "idenifiant ",
+      "required": true,
+      "unique": true,
+      "maxLength": 255
     }
   }
 }
