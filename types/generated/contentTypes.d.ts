@@ -373,6 +373,11 @@ export interface ApiPostPost extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    'preview-button': {
+      listViewColumn: false;
+    };
+  };
   attributes: {
     Title: Attribute.String;
     Content: Attribute.RichText &
